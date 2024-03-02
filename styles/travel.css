@@ -17,11 +17,44 @@
     background-color: green;
 }
 
+/* header section styles */
+header {
+    background: rgba(255, 144, 14, 0.10);
+    width: 80%;
+    /* padding: 50px 240px; */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav>ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav li {
+    list-style: none;
+    margin-right: 30px;
+    font-weight: 500px;
+    font-size: 1rem;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #424242;
+}
+
+
+
+
 /* banner section styles */
 .banner {
     background-image: url('../Images/banner-img.png');
     background-repeat: no-repeat;
     width: 1170px;
+    width: 80%;
     height: 500px;
     flex-shrink: 0;
     border-radius: 16px;
@@ -86,11 +119,12 @@ select:hover {
 .popular {
     display: flex;
     width: 1170px;
+    width: 85%;
     height: 600px;
     border-radius: 16px;
     background-color: #FFF;
     margin-bottom: 30px;
-    border: 1px solid salmon;
+    /* border: 1px solid salmon; */
     gap: 10px;
 
 }
@@ -110,7 +144,30 @@ select:hover {
 }
 
 /* destination styles */
-.destination {}
+.destination {
+    width: 80%;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.top-right {
+    .top-right {
+        position: absolute;
+        top: 8px;
+        right: 16px;
+    }
+}
 
 .destination-title {
     text-align: center;
@@ -125,15 +182,27 @@ select:hover {
     gap: 5px;
     height: 400px;
     margin-bottom: 8px;
+    width: 80%;
 }
 
 /* choose section styles */
 .choose {
+    width: 80%;
+    margin-top: 20px;
+}
+
+.choose-content {
+    text-align: center;
+
+}
+
+.choose10 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
     gap: 10px;
+    text-align: center;
 }
 
 .choose1 {
@@ -158,13 +227,15 @@ select:hover {
 .newsletter {
     display: flex;
     gap: 20px;
-    width: 100%;
+    width: 80%;
     margin-top: 40px;
 }
-.newsletter-content{
+
+.newsletter-content {
     width: 550px;
     height: 700px;
     border: 2px solid #FF5400;
+    border-radius: 5px;
 }
 
 .newsletter input {
@@ -175,11 +246,13 @@ select:hover {
     text-align: center;
     margin-bottom: 40px;
 }
-.newsletter img{
+
+.newsletter img {
     width: 700px;
     height: 700px
 }
-.primary-btn {
+
+.newsletter .primary-btn {
     width: 500px;
 }
 
@@ -214,13 +287,80 @@ select:hover {
 }
 
 /* Footer section styles */
+.footer-content {
+    text-align: center;
+    width: 80%;
+}
+
+.footer-title,
+.header-title {
+    color: #131318;
+    font-family: Mulish;
+    font-size: 32px;
+    font-weight: 800;
+
+}
+
+.everywhere {
+    color: #FF5400;
+    font-family: Mulish;
+    font-size: 32px;
+    font-weight: 800;
+
+}
+
+.footer-description {
+    color: #5A5A5D;
+    text-align: center;
+    font-family: Mulish;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px
+}
+
+.footer-br {
+    border: 2px solid red;
+}
+/* review section styles */
+.review{
+    margin: 30px;
+}
+.review h2{
+    color: steelblue;
+    font-size: 3rem;
+}
+.review p{
+    color: #5A5A5D;
+}
+.review-title{
+    /* color: #FFF; */
+    font-family: Mulish;
+    font-size: 24px;
+    font-weight: 800;
+}
 
 
 /*For Small Device or Mobile Device  */
 @media screen and (max-width:600px) {
+    
+    header {
+        padding: 20px;
+    }
+
+    .banner-title {
+        justify-content: center;
+    }
+
+    nav,
+    .popular,
+    .choose10,
+    .newsletter {
+        flex-direction: column;
+    }
+
+
     .banner {
-        /* background-image: url('../Images/banner-img.png'); */
-        width: 590px;
+        /* width: 80%; */
         width: 100vh;
         height: 650px;
         flex-shrink: 0;
@@ -259,30 +399,22 @@ select:hover {
         padding: 0 40px;
     }
 
-    .popular {
-        flex-direction: column;
-        gap: 20px;
-
-    }
-
-    /* .popular-img {
-        width: 400px;
-        height: 600px;
-    } */
-    .popular-content {
-        /* height: 800px; */
+    /* .popular-content {
         font-size: 40px;
         border: 1px solid salmon;
         padding: 20px;
-        /* align-items: center; */
+      
         margin-bottom: 30px;
         margin-top: 30px;
-    }
+    } */
 
-    .destination img {
+    /* .destination img {
         width: 100%;
         height: 100%;
+    } */
+    .destination {
+        visibility: hidden;
+        
     }
-
 
 }
